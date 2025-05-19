@@ -449,13 +449,13 @@ const SurveyPage = () => {
         <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 w-full max-w-full sm:max-w-md md:max-w-2xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
             <FaCheckCircle className="text-green-500 text-3xl" />
-            <h2 className="text-xl font-semibold text-gray-800">Khảo sát thành côngết</h2>
+            <h2 className="text-xl font-semibold text-gray-800">Kết quả khảo sát hồ sơ sở thích!</h2>
           </div>
 
           <div className="mb-6">
             <div className="flex items-center space-x-2 mb-2">
               <FaHandPointRight className="text-indigo-500 text-xl" />
-              <h3 className="text-lg font-semibold text-gray-700">Điểm trung bình đã khảo sát theo chủ đề:</h3>
+              <h3 className="text-lg font-semibold text-gray-700">Điểm trung bình đã khảo sát theo đặc tính nghề:</h3>
             </div>
           
             <ul className="list-inside list-disc pl-5">
@@ -473,14 +473,14 @@ const SurveyPage = () => {
               <h3 className="text-lg font-semibold text-gray-700">Nghề nghiệp bạn đã chọn:</h3>
             </div>
             <p className="text-gray-700 pl-5">
-              {surveyResult.professionSelected} thuộc chủ đề <span className="font-bold">{surveyResult.topicSelected}</span>
+              {surveyResult.professionSelected} với đặc tính <span className="font-bold">{surveyResult.topicSelected}</span>
             </p>
           </div>
 
 
           <div className="mb-6 flex items-center space-x-2">
             <FaHandPointRight className="text-indigo-500 text-xl" />
-            <h3 className="text-lg font-semibold text-gray-700">Chủ đề phù hợp:</h3>
+            <h3 className="text-lg font-semibold text-gray-700">Đặc tính nghề phù hợp:</h3>
             <p className="text-gray-700">{surveyResult.predictedRiasecType.topicName}</p>
           </div>
 
@@ -502,7 +502,7 @@ const SurveyPage = () => {
           <div className="mb-6">
             <div className="flex items-center space-x-2 mb-2">
               <FaHandPointRight className="text-indigo-500 text-xl" />
-              <h3 className="text-lg font-semibold text-gray-700">Nghề gợi ý cho bạn:</h3>
+              <h3 className="text-lg font-semibold text-gray-700">Nghề gợi ý theo đặc tính nghề phù hợp cho bạn:</h3>
             </div>
             
             <ul className="list-inside list-disc pl-5">
