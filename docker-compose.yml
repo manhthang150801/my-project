@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DB: surveydb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - survey-network
+
+  fastapi:
+    build: ./survey-app
+    container_name: fastapi
+    environment:
+      DATABASE_URL: "postgresql://postgres:12345678@db:5432/surveydb"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - survey-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./survey-web/dist:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - fastapi
+    networks:
+      - survey-network
+
+networks:
+  survey-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
