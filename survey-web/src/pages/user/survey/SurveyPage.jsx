@@ -449,7 +449,7 @@ const SurveyPage = () => {
         <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 w-full max-w-full sm:max-w-md md:max-w-2xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
             <FaCheckCircle className="text-green-500 text-3xl" />
-            <h2 className="text-xl font-semibold text-gray-800">Kết quả khảo sát hồ sơ sở thích!</h2>
+            <h2 className="text-xl font-semibold text-gray-800">Kết quả khảo sát!</h2>
           </div>
 
           <div className="mb-6">
@@ -502,7 +502,7 @@ const SurveyPage = () => {
           <div className="mb-6">
             <div className="flex items-center space-x-2 mb-2">
               <FaHandPointRight className="text-indigo-500 text-xl" />
-              <h3 className="text-lg font-semibold text-gray-700">Nghề gợi ý theo đặc tính nghề phù hợp cho bạn:</h3>
+              <h3 className="text-lg font-semibold text-gray-700">Một số nghề khác phù hợp với đặc tính nghề của bạn:</h3>
             </div>
             
             <ul className="list-inside list-disc pl-5">
