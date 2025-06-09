@@ -30,7 +30,7 @@ const HomePages = () => {
                             và tìm ra nhóm ngành phù hợp nhất với mình.
                         </p>
                         <p className="text-gray-600 mt-2 text-sm md:text-base">
-                            Kết quả giúp bạn xác định <b>3 mật mã Holland</b>, từ đó tìm được công việc 
+                            Kết quả giúp bạn xác định <b>mật mã Holland</b>, từ đó tìm được công việc 
                             phù hợp nhất với cá tính và khả năng của bạn.
                         </p>
                     </div>

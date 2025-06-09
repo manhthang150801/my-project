@@ -452,7 +452,8 @@ const SurveyPage = () => {
             <h2 className="text-xl font-semibold text-gray-800">Kết quả khảo sát!</h2>
           </div>
 
-          <div className="mb-6">
+          <div className="mb-6 border border-gray-300 rounded-2xl p-4 shadow-sm">
+            <h2 className="mb-4">ĐẶC TÍNH NGHỀ </h2>
             <div className="flex items-center space-x-2 mb-2">
               <FaHandPointRight className="text-indigo-500 text-xl" />
               <h3 className="text-lg font-semibold text-gray-700">Điểm trung bình đã khảo sát theo đặc tính nghề:</h3>
@@ -465,41 +466,45 @@ const SurveyPage = () => {
                 </li>
               ))}
             </ul>
-          </div>
 
-          <div className="mb-6 flex flex-col space-y-2">
-            <div className="flex items-center space-x-2">
+            <div className="mt-4 flex items-center space-x-2">
               <FaHandPointRight className="text-indigo-500 text-xl" />
-              <h3 className="text-lg font-semibold text-gray-700">Nghề nghiệp bạn đã chọn:</h3>
+              <h3 className="text-lg font-semibold text-gray-700">Đặc tính nghề:</h3>
+              <p className="text-gray-700"><span className="font-bold">{surveyResult.predictedRiasecType.topicName}</span></p>
             </div>
-            <p className="text-gray-700 pl-5">
-              {surveyResult.professionSelected} với đặc tính <span className="font-bold">{surveyResult.topicSelected}</span>
-            </p>
           </div>
-
-
-          <div className="mb-6 flex items-center space-x-2">
-            <FaHandPointRight className="text-indigo-500 text-xl" />
-            <h3 className="text-lg font-semibold text-gray-700">Đặc tính nghề phù hợp:</h3>
-            <p className="text-gray-700">{surveyResult.predictedRiasecType.topicName}</p>
-          </div>
-
-          <div className="mb-6 flex flex-col space-y-2">
-            <div className="flex items-center space-x-2">
-              <FaHandPointRight className="text-indigo-500 text-xl" />
-              <h3 className="text-lg font-semibold text-gray-700">Đánh giá:</h3>
+          
+          <div className="mb-6 border border-gray-300 rounded-2xl p-4 shadow-sm">
+            <h2 className="mb-4">NGHỀ LỰA CHỌN VÀ ĐÁNH GIÁ</h2>
+            <div className="flex flex-col space-y-2">
+              <div className="flex items-center space-x-2">
+                <FaHandPointRight className="text-indigo-500 text-xl" />
+                <h3 className="text-lg font-semibold text-gray-700">Nghề nghiệp bạn đã chọn:</h3>
+              </div>
+              <p className="text-gray-700 pl-5">
+                {surveyResult.professionSelected} với đặc tính <span className="font-bold">{surveyResult.topicSelected}</span>
+              </p>
             </div>
-            <p className={`pl-5 ${surveyResult.topicSelected === surveyResult.predictedRiasecType.topicName 
-                ? "text-green-700" 
-                : "text-red-700"}`}>
-              {surveyResult.topicSelected === surveyResult.predictedRiasecType.topicName
-                ? "Nghề đã chọn phù hợp với bạn. Bạn có thể tham khảo thêm một số ngành nghề đề xuất liên quan!"
-                : "Nghề đã chọn có thể chưa phù hợp với bạn. Bạn có thể tham khảo thêm một số ngành nghề đề xuất liên quan!"
-              }
-            </p>
+
+
+            <div className="mt-4 flex flex-col space-y-2">
+              <div className="flex items-center space-x-2">
+                <FaHandPointRight className="text-indigo-500 text-xl" />
+                <h3 className="text-lg font-semibold text-gray-700">Đánh giá:</h3>
+              </div>
+              <p className={`pl-5 ${surveyResult.topicSelected === surveyResult.predictedRiasecType.topicName 
+                  ? "text-green-700" 
+                  : "text-red-700"}`}>
+                {surveyResult.topicSelected === surveyResult.predictedRiasecType.topicName
+                  ? "Nghề đã chọn phù hợp với bạn. Bạn có thể tham khảo thêm một số ngành nghề đề xuất liên quan!"
+                  : "Nghề đã chọn có thể chưa phù hợp với bạn. Bạn có thể tham khảo thêm một số ngành nghề đề xuất liên quan!"
+                }
+              </p>
+            </div>
           </div>
 
-          <div className="mb-6">
+          <div className="mb-6 border border-gray-300 rounded-2xl p-4 shadow-sm">
+            <h2 className="mb-4">NGHỀ NGHIỆP GỢI Ý</h2>
             <div className="flex items-center space-x-2 mb-2">
               <FaHandPointRight className="text-indigo-500 text-xl" />
               <h3 className="text-lg font-semibold text-gray-700">Một số nghề khác phù hợp với đặc tính nghề của bạn:</h3>
